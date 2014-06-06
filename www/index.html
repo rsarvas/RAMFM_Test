@@ -1,0 +1,142 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="author" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+<title></title>
+
+<!-- main JS libs -->
+<script src="js/libs/modernizr.min.js"></script>
+<script src="js/libs/jquery-1.10.0.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+
+<!-- Style CSS -->
+<link href="css/bootstrap.css" media="screen" rel="stylesheet">
+<link href="style.css" media="screen" rel="stylesheet">
+
+<!-- scripts -->
+<script src="js/general.js"></script>
+
+<!-- Include all needed stylesheets and scripts here -->
+
+<!-- Volume, Balance -->
+<script type="text/javascript" src="js/knobRot-0.2.2.js"></script>
+
+<!-- Audio Player  -->
+<link href="css/jplayer.css" rel="stylesheet">
+<script src="js/jquery.jplayer.min.js"></script>
+<script src="js/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {
+                title:"<img src='equipment.jpg' alt='' /><ul><li class='item-artist'><span>01.</span>RAMFM</li><li class='item-song'>Currently playing song</li><li class='item-album'>Stream Test</li></ul>",
+                mp3:"http://uk1-vn.mixstream.net:9866/;"
+            }
+        ], {
+            swfPath: "js",
+            supplied: "mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+    });
+    //]]>
+</script>
+
+
+
+
+<!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+<!--[if gte IE 9]>
+<style type="text/css">
+    .gradient {filter: none !important;}
+</style>
+<![endif]-->
+</head>
+
+<body>
+    <div class="body_wrap">
+        <div class="container">
+		
+            <!-- row -->
+            <div class="row">
+			
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                    <h2 class="foo">RAMFM Stream Player</h2>
+					<p>Does this app work in the background? I guess this is where we find out.</p>
+
+                    <!-- Widget Audio Player -->
+                    <div class="widget-container widget-audio">
+                        <div class="inner">
+                            <!-- jplayer-->
+                            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                            <div id="jp_container_1" class="jp-audio">
+                                <div class="jp-type-playlist">
+                                    <div class="jp-playlist">
+                                        <ul class="jp-playlist-inner">
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                    <div class="jp-gui jp-interface">
+                                        <div class="song_title_wrap">
+                                            <div class="song_title"></div>
+                                        </div>
+                                        <div class="jp-controls-wrap">
+                                            <div class="jp-progress">
+                                                <div class="jp-seek-bar">
+                                                    <div class="jp-play-bar"></div>
+                                                </div>
+                                            </div>
+                                            <ul class="jp-controls">
+                                                <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-previous disabled" tabindex="1">previous</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+                                            </ul>
+                                            <div class="jp-volume-bar">
+                                                <div class="jp-volume-bar-value"></div>
+                                            </div>
+                                            <div class="jp-current-time"></div>
+                                            <div class="jp-duration"></div>
+                                        </div>
+                                    </div>
+                                    <div class="jp-no-solution">
+                                        <span>Update Required</span>
+                                        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/ jplayer-->
+                        </div>
+                    </div>
+                    <!-- Widget Audio Player -->
+                </div>
+            </div>
+            <!--/ row -->
+
+        </div>
+        <!--/ container -->
+    </div>
+</body>
+</html>
